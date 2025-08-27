@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeChat - Anonymous Text Chat</title>
+    <title>SafeChat - Anonymous Text Chat With Strangers | No Registration Needed</title>
+    <meta name="description" content="Connect with people around the world anonymously through SafeChat. No registration required. Safe, private conversations with our random chat platform.">
+    <meta name="keywords" content="anonymous chat, chat with strangers, random chat, online chat, private messaging, safe chat, no registration chat">
+    <meta name="author" content="SafeChat">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="SafeChat - Anonymous Text Chat With Strangers">
+    <meta property="og:description" content="Connect with people around the world anonymously through SafeChat. No registration required.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com">
+    <!-- Replace with actual image URL -->
+    <meta property="og:image" content="https://yourdomain.com/safechat-preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SafeChat - Anonymous Text Chat">
+    <meta name="twitter:description" content="Connect with people around the world anonymously through SafeChat.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +26,30 @@
             <h1>SafeChat</h1>
             <p>Connect with people around the world anonymously</p>
             <button onclick="showPreferenceScreen()">Start Chatting</button>
+            
+            <!-- Added SEO content (hidden until needed) -->
+            <div class="seo-content" style="display: none;">
+                <h2>Safe Anonymous Chat Platform</h2>
+                <p>SafeChat is a free anonymous chat platform that allows you to connect with strangers from around the world without registration. Our random chat service matches you with compatible partners based on your preferences for meaningful conversations.</p>
+                
+                <h3>How to Use SafeChat</h3>
+                <ol>
+                    <li>Click "Start Chatting" to begin</li>
+                    <li>Select your gender and chat preferences</li>
+                    <li>Get matched with a compatible chat partner</li>
+                    <li>Start your anonymous conversation</li>
+                    <li>Use the "Next Person" button anytime to chat with someone new</li>
+                </ol>
+                
+                <h3>Why Choose SafeChat?</h3>
+                <ul>
+                    <li>Complete anonymity - no registration required</li>
+                    <li>Safe and moderated environment</li>
+                    <li>Gender and preference-based matching</li>
+                    <li>Global community of users</li>
+                    <li>Simple and intuitive interface</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Preference Screen -->
@@ -58,6 +95,14 @@
             <button onclick="cancelSearch()">Cancel</button>
         </div>
     </div>
+
+    <!-- Simple footer for SEO -->
+    <footer style="display: none;">
+        <p>© 2023 SafeChat - Anonymous Chat Platform. Connect with strangers safely and anonymously. 
+            <a href="/privacy">Privacy Policy</a> | 
+            <a href="/terms">Terms of Service</a>
+        </p>
+    </footer>
 
     <!-- Scripts - IMPORTANT ORDER -->
     <script src="/socket.io/socket.io.js"></script>

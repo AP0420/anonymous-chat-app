@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeChat - Anonymous Text Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <h1>SafeChat</h1>
+            <p>Connect with people around the world anonymously</p>
+            <button onclick="showPreferenceScreen()">Start Chatting</button>
+        </div>
+
+        <!-- Preference Screen -->
+        <div id="preference-screen" class="screen">
+            <h2>Your Preferences</h2>
+            <div class="form-group">
+                <label>I am:</label>
+                <select id="user-gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>I want to chat with:</label>
+                <select id="user-preference">
+                    <option value="straight-male">Women (Straight)</option>
+                    <option value="straight-female">Men (Straight)</option>
+                    <option value="gay-male">Men (Gay)</option>
+                    <option value="gay-female">Women (Lesbian)</option>
+                    <option value="bisexual">Everyone (Bisexual)</option>
+                </select>
+            </div>
+            <button onclick="startChat()">Find Chat Partner</button>
+        </div>
+
+        <!-- Chat Screen -->
+        <div id="chat-screen" class="screen">
+            <div class="chat-header">
+                <h3>Chat with Stranger</h3>
+                <button onclick="findNewPartner()" class="new-partner-btn">Next Person</button>
+            </div>
+            <div id="chat-messages"></div>
+            <div class="message-input">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="screen">
+            <h2>Looking for a chat partner...</h2>
+            <div class="loading-spinner"></div>
+            <button onclick="cancelSearch()">Cancel</button>
+        </div>
+    </div>
+
+    <!-- Scripts - IMPORTANT ORDER -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="config.js"></script> <!-- This must come before ChatApp.js -->
+    <script src="ChatApp.js"></script>
+</body>
+</html>

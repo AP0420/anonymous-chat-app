@@ -9,7 +9,7 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 // Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); // This line is already there!
 
 // In-memory storage for waiting users and active chats
 const waitingUsers = new Map(); // Key: socket.id, Value: user data
